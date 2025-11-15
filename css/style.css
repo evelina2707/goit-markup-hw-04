@@ -125,6 +125,7 @@ margin-right: 76px;
   left: 0;
   bottom: -1px;
   content: "";
+  display: block;
   border-radius: 2px;
   width: 100%;
   height: 4px;
@@ -422,12 +423,6 @@ column-gap: 24px;
 row-gap: 48px;
 }
 
-.project-card:hover {
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16),
-    0px 2px 1px rgba(46, 47, 66, 0.08);
-    transform: translateY(0%);
-}
 
 .section-title {
   line-height: 1.11;
@@ -442,6 +437,48 @@ row-gap: 48px;
   width: calc((100% - 48px) / 3);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.project-card-list:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 2px 1px rgba(46, 47, 66, 0.08);
+    transform: translateY(0%);
+}
+
+.app {
+  padding: 32px 16px;
+  border: 1px solid #e7e9fc;
+  border-top: none;
+  margin-top: auto;
+}
+
+.overlay {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 32px;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #f4f4fd;
+  background-color: #4d5ae5;
+  padding: 40px 32px;
+  height: 100%;
+  width: 100%;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.overlay:hover .overlay-text {
+  transform: translateY(0);
+} 
 
 .portfolio-text {
 
@@ -458,14 +495,6 @@ row-gap: 48px;
   text-align: left;
 }
 
-.app {
-  position: relative;
-  overflow: hidden;
-  padding: 32px 16px;
-  border: 1px solid #e7e9fc;
-  border-top: none;
-  margin-top: auto;
-}
 
 .app:hover {
   transition-duration: 250ms;
@@ -479,11 +508,14 @@ row-gap: 48px;
 
 .footer {
   display: flex;
+align-items: baseline;
   background: #2e2f42;
   padding: 100px 0;
 }
 
-.footer-info {}
+.footer-info {
+margin-right: 120px;
+}
 
 .footer-logo {
   font-family: "Raleway", sans-serif;
@@ -513,7 +545,8 @@ row-gap: 48px;
 
 
 .footer-socials {
-  display: block;
+  display: flex;
+  align-items: baseline;
 }
 
 .footer-text-socials {
@@ -528,10 +561,12 @@ row-gap: 48px;
 
 .socials-footer-list {
   display: flex;
+  gap: 16px;
 }
 
 .footer-socials-list-item {
-
+width: 16px;
+height: 16px;
 }
 
 .footer-socials-link {
@@ -540,13 +575,14 @@ row-gap: 48px;
   justify-content: center;
   flex-direction: row;
   gap: 16px;
-  width: 40px;
-  height: 40px;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   background-color: #4d5ae5;
 }
 
-.footer-socials-link:hover {
+.footer-socials-link:hover
+.footer-socials-link:focus {
   background-color: #31D0AA;
   transition-duration: 250ms;
 
