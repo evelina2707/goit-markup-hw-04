@@ -117,10 +117,12 @@ margin-right: 76px;
   padding: 24px 0;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .nav-link-current {
   position: relative;
   color: #404bbf;
   padding: 24px 0;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link-current::after {
@@ -183,7 +185,6 @@ display: flex;
 /* #region solutions */
 
 .main-section {
-  background-color: #2E2F42;
 background-image: linear-gradient(rgba(46, 47, 66, 0.7), 
 rgba(46, 47, 66, 0.7)), 
 url(../images/img/hero-section/people-office\ 1.jpg);  
@@ -370,6 +371,7 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   height: 40px;
   border-radius: 50%;
   background-color: #4d5ae5;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .socials-link:hover,
@@ -581,6 +583,7 @@ height: 40px;
   height: 100%;
   border-radius: 50%;
   background-color: #4d5ae5;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-socials-link:hover,
