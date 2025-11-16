@@ -185,7 +185,9 @@ display: flex;
 /* #region solutions */
 
 .main-section {
-background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/img/hero-section/people-office\ 1.jpg);
+background-image: linear-gradient(rgba(46, 47, 66, 0.7), 
+rgba(46, 47, 66, 0.7)), 
+url(../images/img/hero-section/people-office.jpg);
 
   padding: 188px 0;
   max-width: 1440px;
