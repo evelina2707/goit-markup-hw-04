@@ -100,7 +100,6 @@ margin-right: 76px;
   letter-spacing: 0.02em;
   color: #2e2f42;
   display: flex;
-  position: relative;
 }
 
 .nav-list-link:active {
@@ -118,10 +117,15 @@ margin-right: 76px;
   padding: 24px 0;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.nav-link::after {
-  position: absolute;
+.nav-link-current {
+  position: relative;
   color: #404bbf;
+  padding: 24px 0;
+}
+
+.nav-link-current::after {
+  position: absolute;
+  background-color: #404bbf;
   left: 0;
   bottom: -1px;
   content: "";
@@ -335,12 +339,9 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
 
 .card {
   padding: 32px 0;
-  margin: auto;
-  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
   background: #fff;
   border-radius: 0 0 4px 4px;
   }
-
 
 .team-text {
 text-align: center;
@@ -413,7 +414,6 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 .portfolio {
 padding: 120px 0 120px 0;
-
 }
 
 .project-card {
@@ -549,7 +549,8 @@ margin-right: 120px;
 
 .footer-socials {
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .footer-text-socials {
